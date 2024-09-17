@@ -1,18 +1,12 @@
 {
-    "routes": [
-      {
-        "src": "/*",
-        "dest": "/index.html"
-      }
-    ],
-    "navigationFallback": {
-      "rewrite": "/index.html"
+  "routes": [
+    {
+      "route": "/api/*",
+      "allowedRoles": ["anonymous"]
     },
-    "responseOverrides": {
-      "404": {
-        "redirect": "/index.html",
-        "statusCode": 200
-      }
+    {
+      "route": "/*",
+      "allowedRoles": ["anonymous"]
     }
-  }
-  
+  ]
+}
